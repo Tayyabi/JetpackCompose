@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">JetpackCompose</string>
+    <string name="title_activity_text_styling">TextStylingActivity</string>
+    <string name="title_activity_state">StateActivity</string>
+    <string name="title_activity_text_field_btn_snackbar">TextFieldBtnSnackbarActivity</string>
+    <string name="title_activity_list">ListActivity</string>
+</resources>
