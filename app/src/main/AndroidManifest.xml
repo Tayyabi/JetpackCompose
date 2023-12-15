@@ -13,14 +13,9 @@
         android:theme="@style/Theme.JetpackCompose"
         tools:targetApi="31">
         <activity
-            android:name=".ListActivity"
-            android:exported="false"
-            android:label="@string/title_activity_list"
-            android:theme="@style/Theme.JetpackCompose" />
-        <activity
-            android:name=".TextFieldBtnSnackbarActivity"
+            android:name=".BottomSheetsActivity"
             android:exported="true"
-            android:label="@string/title_activity_text_field_btn_snackbar"
+            android:label="@string/title_activity_bottom_sheets"
             android:theme="@style/Theme.JetpackCompose">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +23,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ListActivity"
+            android:exported="true"
+            android:label="@string/title_activity_list"
+            android:theme="@style/Theme.JetpackCompose"/>
+
+        <activity
+            android:name=".TextFieldBtnSnackbarActivity"
+            android:exported="true"
+            android:label="@string/title_activity_text_field_btn_snackbar"
+            android:theme="@style/Theme.JetpackCompose" />
         <activity
             android:name=".StateActivity"
             android:exported="false"
@@ -37,7 +43,7 @@
             android:name=".TextStylingActivity"
             android:exported="true"
             android:label="@string/title_activity_text_styling"
-            android:theme="@style/Theme.JetpackCompose"></activity>
+            android:theme="@style/Theme.JetpackCompose" />
         <activity
             android:name=".MainActivity"
             android:exported="false"
