@@ -13,10 +13,10 @@
         android:theme="@style/Theme.JetpackCompose"
         tools:targetApi="31">
         <activity
-            android:name=".BottomSheetsActivity"
+            android:name=".TopAppBarActivity"
             android:exported="true"
-            android:label="@string/title_activity_bottom_sheets"
-            android:theme="@style/Theme.JetpackCompose">
+            android:label="@string/title_activity_top_app_bar"
+            android:theme="@style/Theme.JetpackCompose" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,11 +24,17 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".BottomSheetsActivity"
+            android:exported="true"
+            android:label="@string/title_activity_bottom_sheets"
+            android:theme="@style/Theme.JetpackCompose">
+
+        </activity>
+        <activity
             android:name=".ListActivity"
             android:exported="true"
             android:label="@string/title_activity_list"
-            android:theme="@style/Theme.JetpackCompose"/>
-
+            android:theme="@style/Theme.JetpackCompose" />
         <activity
             android:name=".TextFieldBtnSnackbarActivity"
             android:exported="true"
