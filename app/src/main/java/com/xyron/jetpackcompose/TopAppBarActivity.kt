@@ -63,7 +63,8 @@ fun Greeting3() {
                     IconButton(onClick = { /*TODO*/ }) {
                         Icon(
                             imageVector = Icons.Default.ArrowBack,
-                            contentDescription = "Go back")
+                            contentDescription = "Go back"
+                        )
                     }
                 },
                 actions = {

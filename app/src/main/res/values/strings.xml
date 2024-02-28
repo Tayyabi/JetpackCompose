@@ -6,4 +6,9 @@
     <string name="title_activity_list">ListActivity</string>
     <string name="title_activity_bottom_sheets">BottomSheetsActivity</string>
     <string name="title_activity_top_app_bar">TopAppBarActivity</string>
+    <string name="title_activity_swipable_pages">SwipablePagesActivity</string>
+    <string name="title_activity_tabs_with_horizontal_pager">TabsWithHorizontalPagerActivity
+    </string>
+    <string name="title_activity_scroll_pager">ScrollPagerActivity</string>
+    <string name="title_activity_accompanist_pager">AccompanistPagerActivity</string>
 </resources>
