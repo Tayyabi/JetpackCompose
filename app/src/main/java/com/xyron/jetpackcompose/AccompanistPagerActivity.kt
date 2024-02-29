@@ -18,6 +18,9 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
+import androidx.compose.material.ContentAlpha
+import androidx.compose.material.LocalContentAlpha
+import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -70,51 +73,62 @@ fun HorizontalPagerWithIndicators(deals: List<Deal>) {
     val pagerState = rememberPagerState(pageCount = { deals.size })
     val coroutineScope = rememberCoroutineScope()
 
-    Column(
-        modifier = Modifier.fillMaxSize()
-    ) {
+    Column(modifier = Modifier.fillMaxSize()) {
 
-        HorizontalPager(
-            state = pagerState,
-            contentPadding = PaddingValues(horizontal = 20.dp),
-            pageSpacing = 10.dp
-        ) { page ->
-            DisplayDeal(deal = deals[page])
-
-        }
 
         Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .wrapContentSize(Alignment.Center)
-                .padding(top = 10.dp)
+            modifier = Modifier.fillMaxWidth()
         ) {
-            HorizontalPagerIndicator(
-                pageCount = deals.size,
-                pagerState = pagerState,
+
+            HorizontalPager(
+                state = pagerState,
+                contentPadding = PaddingValues(horizontal = 20.dp),
+                pageSpacing = 10.dp
+            ) { page ->
+                DisplayDeal(deal = deals[page])
+            }
+
+            Box(
                 modifier = Modifier
-                    .clickable {
+                    .fillMaxWidth()
+                    .height(200.dp)
+                    .wrapContentSize(Alignment.BottomCenter)
+                    .padding(bottom = 10.dp)
+            ) {
+                HorizontalPagerIndicator(
+                    pageCount = deals.size,
+                    pagerState = pagerState,
+                    activeColor = Color.Black,
+                    inactiveColor = Color.White,
+                    indicatorWidth = 8.dp,
+                    indicatorHeight = 8.dp,
+                    modifier = Modifier
+                        .clickable {
 
-                        val currentPage = pagerState.currentPage
-                        val totalPages = deals.size
-                        val nextPage =
-                            if (currentPage < totalPages - 1)
-                                currentPage + 1
-                            else
-                                0
+                            val currentPage = pagerState.currentPage
+                            val totalPages = deals.size
+                            val nextPage =
+                                if (currentPage < totalPages - 1)
+                                    currentPage + 1
+                                else
+                                    0
 
-                        coroutineScope.launch { pagerState.animateScrollToPage(nextPage) }
+                            coroutineScope.launch { pagerState.animateScrollToPage(nextPage) }
 
+                        }
+                )
+            }
+
+            LaunchedEffect(pagerState) {
+                snapshotFlow { pagerState.currentPage }
+                    .collect { currentPage ->
+                        pagerState.animateScrollToPage(currentPage)
                     }
-
-            )
+            }
         }
 
-        LaunchedEffect(pagerState) {
-            snapshotFlow { pagerState.currentPage }
-                .collect { currentPage ->
-                    pagerState.animateScrollToPage(currentPage)
-                }
+        Box(modifier = Modifier.weight(1f)){
+
         }
     }
 

@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,9 +16,9 @@
         android:theme="@style/Theme.JetpackCompose"
         tools:targetApi="31">
         <activity
-            android:name=".AccompanistPagerActivity"
+            android:name=".CoilImageCachingActivity"
             android:exported="true"
-            android:label="@string/title_activity_accompanist_pager"
+            android:label="@string/title_activity_coil_image_caching"
             android:theme="@style/Theme.JetpackCompose" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,17 +27,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ScrollPagerActivity"
-            android:exported="true"
-            android:label="@string/title_activity_scroll_pager"
+            android:name=".AccompanistPagerActivity"
+            android:exported="false"
+            android:label="@string/title_activity_accompanist_pager"
             android:theme="@style/Theme.JetpackCompose">
 
         </activity>
         <activity
-            android:name=".TabsWithHorizontalPagerActivity"
-            android:exported="true"
-            android:label="@string/title_activity_tabs_with_horizontal_pager"
+            android:name=".ScrollPagerActivity"
+            android:exported="false"
+            android:label="@string/title_activity_scroll_pager"
             android:theme="@style/Theme.JetpackCompose"/>
+        <activity
+            android:name=".TabsWithHorizontalPagerActivity"
+            android:exported="false"
+            android:label="@string/title_activity_tabs_with_horizontal_pager"
+            android:theme="@style/Theme.JetpackCompose" />
         <activity
             android:name=".SwipablePagesActivity"
             android:exported="false"
@@ -42,22 +50,22 @@
             android:theme="@style/Theme.JetpackCompose" />
         <activity
             android:name=".TopAppBarActivity"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/title_activity_top_app_bar"
             android:theme="@style/Theme.JetpackCompose" />
         <activity
             android:name=".BottomSheetsActivity"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/title_activity_bottom_sheets"
             android:theme="@style/Theme.JetpackCompose" />
         <activity
             android:name=".ListActivity"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/title_activity_list"
             android:theme="@style/Theme.JetpackCompose" />
         <activity
             android:name=".TextFieldBtnSnackbarActivity"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/title_activity_text_field_btn_snackbar"
             android:theme="@style/Theme.JetpackCompose" />
         <activity
@@ -67,7 +75,7 @@
             android:theme="@style/Theme.JetpackCompose" />
         <activity
             android:name=".TextStylingActivity"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/title_activity_text_styling"
             android:theme="@style/Theme.JetpackCompose" />
         <activity

@@ -11,4 +11,5 @@
     </string>
     <string name="title_activity_scroll_pager">ScrollPagerActivity</string>
     <string name="title_activity_accompanist_pager">AccompanistPagerActivity</string>
+    <string name="title_activity_coil_image_caching">CoilImageCachingActivity</string>
 </resources>
