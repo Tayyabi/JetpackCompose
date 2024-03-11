@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".MyApplication"
@@ -16,9 +16,9 @@
         android:theme="@style/Theme.JetpackCompose"
         tools:targetApi="31">
         <activity
-            android:name=".CoilImageCachingActivity"
+            android:name=".BottomNavigationBarActivity"
             android:exported="true"
-            android:label="@string/title_activity_coil_image_caching"
+            android:label="@string/title_activity_bottom_navigation_bar"
             android:theme="@style/Theme.JetpackCompose" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,17 +27,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AccompanistPagerActivity"
-            android:exported="false"
-            android:label="@string/title_activity_accompanist_pager"
+            android:name=".CoilImageCachingActivity"
+            android:exported="true"
+            android:label="@string/title_activity_coil_image_caching"
             android:theme="@style/Theme.JetpackCompose">
 
         </activity>
         <activity
+            android:name=".AccompanistPagerActivity"
+            android:exported="false"
+            android:label="@string/title_activity_accompanist_pager"
+            android:theme="@style/Theme.JetpackCompose"/>
+        <activity
             android:name=".ScrollPagerActivity"
             android:exported="false"
             android:label="@string/title_activity_scroll_pager"
-            android:theme="@style/Theme.JetpackCompose"/>
+            android:theme="@style/Theme.JetpackCompose" />
         <activity
             android:name=".TabsWithHorizontalPagerActivity"
             android:exported="false"
