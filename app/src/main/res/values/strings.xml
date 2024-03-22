@@ -13,4 +13,6 @@
     <string name="title_activity_accompanist_pager">AccompanistPagerActivity</string>
     <string name="title_activity_coil_image_caching">CoilImageCachingActivity</string>
     <string name="title_activity_bottom_navigation_bar">BottomNavigationBarActivity</string>
+    <string name="title_activity_canvas">CanvasActivity</string>
+    <string name="title_activity_custom_component">CustomComponentActivity</string>
 </resources>

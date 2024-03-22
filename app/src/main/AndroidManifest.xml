@@ -16,9 +16,9 @@
         android:theme="@style/Theme.JetpackCompose"
         tools:targetApi="31">
         <activity
-            android:name=".BottomNavigationBarActivity"
+            android:name=".CustomComponentActivity"
             android:exported="true"
-            android:label="@string/title_activity_bottom_navigation_bar"
+            android:label="@string/title_activity_custom_component"
             android:theme="@style/Theme.JetpackCompose" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,17 +27,26 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".CanvasActivity"
+            android:exported="true"
+            android:label="@string/title_activity_canvas"
+            android:theme="@style/Theme.JetpackCompose"/>
+
+        <activity
+            android:name=".BottomNavigationBarActivity"
+            android:exported="true"
+            android:label="@string/title_activity_bottom_navigation_bar"
+            android:theme="@style/Theme.JetpackCompose"/>
+        <activity
             android:name=".CoilImageCachingActivity"
             android:exported="true"
             android:label="@string/title_activity_coil_image_caching"
-            android:theme="@style/Theme.JetpackCompose">
-
-        </activity>
+            android:theme="@style/Theme.JetpackCompose" />
         <activity
             android:name=".AccompanistPagerActivity"
             android:exported="false"
             android:label="@string/title_activity_accompanist_pager"
-            android:theme="@style/Theme.JetpackCompose"/>
+            android:theme="@style/Theme.JetpackCompose" />
         <activity
             android:name=".ScrollPagerActivity"
             android:exported="false"
