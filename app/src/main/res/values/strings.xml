@@ -16,4 +16,5 @@
     <string name="title_activity_canvas">CanvasActivity</string>
     <string name="title_activity_custom_component">CustomComponentActivity</string>
     <string name="title_activity_effect_handlers">EffectHandlersActivity</string>
+    <string name="title_activity_drop_down">DropDownActivity</string>
 </resources>
