@@ -17,4 +17,5 @@
     <string name="title_activity_custom_component">CustomComponentActivity</string>
     <string name="title_activity_effect_handlers">EffectHandlersActivity</string>
     <string name="title_activity_drop_down">DropDownActivity</string>
+    <string name="title_activity_navigation_drawer">NavigationDrawerActivity</string>
 </resources>
